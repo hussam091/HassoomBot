@@ -2,9 +2,11 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 import random
 
-API_ID = 22663587
-API_HASH = "f260cacdecbf1c5a241d068a734c3b69"
-BOT_TOKEN = "8427928027:AAErywytpNELFkGIICFUf92fLC9ymb3Efo4"
+import os
+
+API_ID = int(os.getenv("API_ID"))
+API_HASH = os.getenv("API_HASH")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 app = Client("hassoom_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
